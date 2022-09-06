@@ -29,7 +29,7 @@ class _SearchViewState extends State<SearchView> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          headerView(),
+          headerView(context: context),
           horizontalSecondarySeparator(),
           WidgetWrapper(
             child: Column(

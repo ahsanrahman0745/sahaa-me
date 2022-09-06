@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sahaame/view/landing/landing_view.dart';
+import 'package:sahaame/view/search/search.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,6 +35,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: LandingView());
+    return const Scaffold(body: SearchView());
   }
 }
