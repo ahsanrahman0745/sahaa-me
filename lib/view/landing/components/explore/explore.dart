@@ -16,7 +16,8 @@ Widget explore() {
       heading(title: 'Explore the Sahaa Market'),
       h30,
       Wrap(
-        spacing: 20,
+        spacing: 100,
+        runSpacing: 100,
         children: [
           for (var explore in explores)
             exploreItem(title: explore['title'], image: explore['image'])

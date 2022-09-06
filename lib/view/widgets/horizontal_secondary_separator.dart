@@ -2,10 +2,10 @@ import 'package:flutter/widgets.dart';
 
 import '../../utils/constants.dart';
 
-Widget horizontalSecondarySeparator() {
+Widget horizontalSecondarySeparator({size = 4}) {
   return Container(
     width: double.infinity,
     color: secondaryColors,
-    height: 4,
+    height: size,
   );
 }
