@@ -35,9 +35,11 @@ class _SearchViewState extends State<SearchView> {
             Row(
               children: [
                 Expanded(flex: 1, child: sideBar()),
-                Expanded(flex: 4, child: Container())
+                Expanded(flex: 4, child: Container()),
+
               ],
             ),
+            Text("ehhhhhhhhh")
           ],
         ),
       ),
