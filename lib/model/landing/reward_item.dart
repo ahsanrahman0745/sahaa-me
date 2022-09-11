@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import '../../../../utils/constants.dart';
+import '../../utils/constants.dart';
 
 class RewardItem extends StatelessWidget {
   const RewardItem(
@@ -21,7 +21,7 @@ class RewardItem extends StatelessWidget {
           Image.asset(
             'assets/image/$image',
           ),
-          h20,
+          SizedBox(height: 20,),
           RichText(
               textAlign: TextAlign.center,
               text: TextSpan(children: [
@@ -33,7 +33,7 @@ class RewardItem extends StatelessWidget {
                 TextSpan(
                   text: middle,
                   style: const TextStyle(
-                    color: secondaryColors,
+                    color: sahaaColor,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     height: 1.5,

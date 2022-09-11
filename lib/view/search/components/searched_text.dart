@@ -20,7 +20,7 @@ Widget searchedText({required String text}) {
             const TextSpan(text: 'Did you mean a company call '),
             TextSpan(
                 text: '"$text"?',
-                style: const TextStyle(color: secondaryColors))
+                style: const TextStyle(color: sahaaColor))
           ])),
         ],
       ),

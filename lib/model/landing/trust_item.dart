@@ -35,12 +35,10 @@ Widget trustItem(
                         border: Border.all(width: 3, color: lightColor),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(100))),
-                    child: ClipRRect(
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(100)),
+                    child: CircleAvatar(
+                      radius: 50,
                       child: SvgPicture.asset(
                         'assets/svg/$image',
-                        height: 100,
                       ),
                     ),
                   ),
@@ -57,7 +55,7 @@ Widget trustItem(
                   style: const TextStyle(
                       fontSize: 20, fontWeight: FontWeight.w700),
                 ),
-                h15,
+               SizedBox(height: 15,),
                 Text(
                   description,
                   textAlign: TextAlign.center,

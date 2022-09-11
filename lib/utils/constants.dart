@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 const darkColor = Colors.black;
-const secondaryColors = Color(0xFFE86E24);
+const sahaaColor = Color(0xFFE86E24);
 const exploreSvgSize = 100.0;
 const lightColor = Colors.white;
 const rewardColor = Color(0xFFEDEDED);

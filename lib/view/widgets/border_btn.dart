@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+  import 'package:flutter/material.dart';
 import 'package:sahaame/utils/constants.dart';
 
 Widget borderBtn({required String title}) {
@@ -6,12 +6,12 @@ Widget borderBtn({required String title}) {
     Container(
       padding: const EdgeInsets.fromLTRB(30, 13, 30, 13),
       decoration: BoxDecoration(
-          border: Border.all(width: 1, color: secondaryColors),
+          border: Border.all(width: 1, color: sahaaColor),
           borderRadius: const BorderRadius.all(Radius.circular(5))),
       child: Text(
         title,
         style: const TextStyle(
-            color: secondaryColors, fontWeight: FontWeight.w400, fontSize: 15),
+            color: sahaaColor, fontWeight: FontWeight.w400, fontSize: 15),
       ),
     )
   ]);

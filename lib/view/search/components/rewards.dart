@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:sahaame/view/landing/components/reward/reward_item.dart';
+import 'package:sahaame/model/landing/reward_item.dart';
 import 'package:sahaame/utils/data.dart';
 
 Widget rewardsList() {

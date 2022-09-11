@@ -5,7 +5,7 @@ import '../../utils/constants.dart';
 Widget horizontalSecondarySeparator() {
   return Container(
     width: double.infinity,
-    color: secondaryColors,
+    color: sahaaColor,
     height: 4,
   );
 }

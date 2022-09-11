@@ -52,26 +52,27 @@ List trusts = [
     'title': 'Verified Reviews',
     'description':
         'All the reviews on Sahaa are verified in order to provide the customers with top-notch services without compromising the quality and our reputation.',
-    'image': 'verifiedrevies.svg'
+    'image': 'reviews.svg'
   },
   {
-    'title': 'Verified Reviews',
+    'title': 'Business Categories',
     'description':
-        'All the reviews on Sahaa are verified in order to provide the customers with top-notch services without compromising the quality and our reputation.',
-    'image': 'verifiedrevies.svg'
+    'Our website is providing the customers with authentic business options without any second guesses. Find more than 300 business categories swiftly.',
+    'image': 'categories.svg'
   },
   {
-    'title': 'Verified Reviews',
+    'title': 'Accessibility',
     'description':
-        'All the reviews on Sahaa are verified in order to provide the customers with top-notch services without compromising the quality and our reputation.',
-    'image': 'verifiedrevies.svg'
+        'With Sahaa, enjoy multiple services from different vendors as we are providing our customers a platform where they can connect to businesses.',
+    'image': 'accesibility.svg'
   },
   {
-    'title': 'Verified Reviews',
+    'title': 'Business Entities',
     'description':
-        'All the reviews on Sahaa are verified in order to provide the customers with top-notch services without compromising the quality and our reputation.',
-    'image': 'verifiedrevies.svg'
-  }
+        'We will provide you with a platform where you can target the right audience to boost sales, profits and enrich your marketing strategies without any stress.',
+    'image': 'entities.svg'
+  },
+
 ];
 
 List category = [

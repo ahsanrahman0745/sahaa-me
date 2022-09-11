@@ -20,14 +20,14 @@ Widget Header() {
                     Row(
                       children: const [
                         Text(
-                          "shaa.me",
+                          "sahaa.me",
                           style: TextStyle(color: Colors.white),
                         ),
                         SizedBox(
                           width: 40,
                         ),
                         Text(
-                          "shaa.promotion",
+                          "sahaa.promotion",
                           style: TextStyle(color: Colors.white),
                         ),
                         Spacer(),
@@ -84,7 +84,7 @@ Widget Header() {
                 children: [
                   Row(
                     children: [
-                      SvgPicture.asset("icons/logo.svg"),
+                      SvgPicture.asset("assets/svg/sahaa-logo.svg"),
                       const SizedBox(
                         width: 10,
                       ),

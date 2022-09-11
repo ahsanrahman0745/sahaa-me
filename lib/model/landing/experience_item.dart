@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sahaame/view/widgets/smallText.dart';
 
-import '../../../../utils/constants.dart';
+import '../../utils/constants.dart';
 
 Widget experienceItem(
     {required String title,
@@ -14,7 +14,7 @@ Widget experienceItem(
         Text(
           count,
           style: TextStyle(
-            color: Colors.black.withOpacity(0.2),
+            color: sahaaColor.withOpacity(0.2),
             fontWeight: FontWeight.bold,
             fontSize: 80,
           ),
@@ -32,7 +32,7 @@ Widget experienceItem(
                     fontWeight: FontWeight.w600,
                     height: 2),
               ),
-              h15,
+              SizedBox(height: 15,),
               smallText(text: description)
             ],
           ),
