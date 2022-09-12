@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sahaame/header/headers.dart';
+import '../../footer/footer.dart';
+import '../../header/appbar.dart';
+import '../../responsive.dart';
 import 'components/consultant.dart';
 import 'components/experience.dart';
 import 'components/explore.dart';
@@ -20,11 +23,13 @@ class _LandingViewState extends State<LandingView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: Drawer(),
       body: SizedBox(
         width: double.infinity,
         child: SingleChildScrollView(
           child: Column(
             children: [
+              Responsive.isMobile(context)? CustomAppBar():
               Header(),
               const LandingSlider(),
              const SizedBox(height: 40,),
@@ -36,9 +41,11 @@ class _LandingViewState extends State<LandingView> {
               const SizedBox(height: 40,),
               const Consultant(),
               const SizedBox(height: 40,),
-              Trust(),
+              const Trust(),
               const SizedBox(height: 40,),
-              Register(),
+              const Register(),
+              const SizedBox(height: 40,),
+              const Footer(),
             ],
           ),
         ),

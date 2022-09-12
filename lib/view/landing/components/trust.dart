@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../model/landing/trust_item.dart';
+import '../../../responsive.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/data.dart';
 
@@ -10,7 +11,7 @@ class Trust extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 100),
+      padding:  EdgeInsets.symmetric(horizontal: Responsive.isMobile(context)?10: 100),
       child: Column(
         children: [
           Text(
@@ -28,13 +29,33 @@ class Trust extends StatelessWidget {
           SizedBox(
             height: 30,
           ),
-          Row(
+          Responsive.isDesktop(context)?
+          IntrinsicHeight(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                for (var trust in trusts)
+                  Expanded(
+                    child: TrustItem(
+                        title: trust['title'],
+                        description: trust['description'],
+                        image: trust['image']),
+                  )
+              ],
+            ),
+          )
+              :
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               for (var trust in trusts)
-                trustItem(
-                    title: trust['title'],
-                    description: trust['description'],
-                    image: trust['image'])
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: TrustItem(
+                      title: trust['title'],
+                      description: trust['description'],
+                      image: trust['image']),
+                )
             ],
           )
         ],

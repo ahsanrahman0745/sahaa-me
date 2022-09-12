@@ -20,7 +20,7 @@ Widget experienceItem(
           ),
         ),
         Container(
-          padding: EdgeInsets.only(left: 30, top: 10),
+          padding: EdgeInsets.only(left: 20, top: 10, bottom: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

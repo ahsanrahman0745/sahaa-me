@@ -1,40 +1,67 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sahaame/utils/constants.dart';
-import 'package:sahaame/view/widgets/filled_btn.dart';
+import '../../../responsive.dart';
 
 class Register extends StatelessWidget {
   const Register({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  SizedBox(
+    return Container(
       width: double.infinity,
-      child: Stack(
-        alignment: Alignment.center,
+      decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/image/registerbanner.jpg'),
+              fit: BoxFit.cover)),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset('assets/image/registerbanner.jpg'),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 100),
+            padding: EdgeInsets.symmetric(
+                horizontal: Responsive.isMobile(context) ? 10 : 100,
+                vertical: 100),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
+                Text(
                   'Register to the Sahaa Family',
                   style: TextStyle(
-                      fontSize: 45, fontWeight: FontWeight.bold, color: lightColor),
+                      fontSize: Responsive.isMobile(context) ? 24 : 36,
+                      fontWeight: FontWeight.bold,
+                      color: lightColor),
                 ),
-                h15,
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.5,
+                const SizedBox(
+                  height: 15,
+                ),
+                const Text(
+                  'Register and become a partner with Sahaa to open a plethora box of benefits and opportunities',
+                  style:
+                      TextStyle(color: lightColor, fontSize: 18, height: 1.2),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print("SHah ooo");
+                  },
+                  style: ElevatedButton.styleFrom(
+                    side: BorderSide.none,
+                    shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.zero),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 40, vertical: 20),
+                    foregroundColor: Colors.white,
+                    backgroundColor: sahaaColor, // foreground
+                  ),
                   child: const Text(
-                    'Register and become a partner with Sahaa to open a plethora box of benefits and opportunities',
-                    style: TextStyle(color: lightColor, fontSize: 18, height: 1.2),
+                    "Become a Partener",
+                    style: TextStyle(fontSize: 14, color: Colors.white),
                   ),
                 ),
-                h30,
-                filledBtn(title: 'BECOME A PARTNER', align: MainAxisAlignment.start)
               ],
             ),
           )
@@ -43,4 +70,3 @@ class Register extends StatelessWidget {
     );
   }
 }
-
