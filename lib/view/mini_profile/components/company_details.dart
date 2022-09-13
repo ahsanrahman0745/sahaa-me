@@ -266,7 +266,7 @@ class CompanyDetails extends StatelessWidget {
             /// business hours
              SizedBox(height: 30,),
             Container(
-              width: size.width/1.2,
+              width: size.width/1.1,
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
               decoration: BoxDecoration(
                 color: sahaaLightColor,
@@ -290,6 +290,7 @@ class CompanyDetails extends StatelessWidget {
                   ),),
                   Text('0', style: TextStyle(fontSize: 13, color: sahaaColor),),
                   Container(
+                    width: Responsive.isDesktop(context)? null : size.width/1.1,
                     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     decoration: BoxDecoration(
                       color: sahaaColor,
@@ -308,7 +309,7 @@ class CompanyDetails extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(width: 10,),
+            SizedBox(height: 20,),
             Text(
               'Business Hours',
               style: TextStyle(
@@ -318,8 +319,8 @@ class CompanyDetails extends StatelessWidget {
               height: 10,
             ),
             Table(
-              defaultColumnWidth: FixedColumnWidth(size.width/3),
-              children: [
+              defaultColumnWidth: FixedColumnWidth(size.width/2.2),
+              children: const[
                 TableRow(
                     children: [
                       Padding(
