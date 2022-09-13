@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 
 const darkColor = Colors.black;
 const sahaaColor = Color(0xFFE86E24);
+const sahaaLightColor = Color(0xFFffeede);
 const exploreSvgSize = 100.0;
 const lightColor = Colors.white;
 const rewardColor = Color(0xFFEDEDED);

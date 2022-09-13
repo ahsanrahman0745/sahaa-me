@@ -3,6 +3,7 @@ import 'package:sahaame/view/landing/components/waveclipper.dart';
 
 import '../../../responsive.dart';
 import '../../../utils/constants.dart';
+import '../../mini_profile/mini_profile.dart';
 import 'carousel.dart';
 
 class LandingSlider extends StatelessWidget {
@@ -74,6 +75,9 @@ class LandingSlider extends StatelessWidget {
                           child: ElevatedButton(
                             onPressed: () {
                               print("SHah ooo");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => MiniProfile()),);
                             },
                             style: ElevatedButton.styleFrom(
                               side: BorderSide.none,
@@ -140,6 +144,9 @@ class LandingSlider extends StatelessWidget {
                         ElevatedButton(
                           onPressed: () {
                             print("SHah ooo");
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => MiniProfile()),);
                           },
                           style: ElevatedButton.styleFrom(
                             side: BorderSide.none,
