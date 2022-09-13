@@ -15,13 +15,13 @@ Widget bredCrumbes({
             navigation[i],
             style: i == (navigation.length - 1)
                 ? const TextStyle(color: darkColor)
-                : const TextStyle(color: secondaryColors),
+                : const TextStyle(color: sahaaColor),
           );
         },
         separatorBuilder: (c, i) {
           return const Text(
             ' > ',
-            style: TextStyle(color: secondaryColors),
+            style: TextStyle(color: sahaaColor),
           );
         },
         itemCount: navigation.length),
