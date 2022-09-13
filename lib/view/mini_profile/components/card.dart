@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import '../../../responsive.dart';
 import '../../../utils/constants.dart';
 import '../../../widgets/onhover.dart';
+import 'package:iconify_flutter/iconify_flutter.dart';
+import 'package:iconify_flutter/icons/ri.dart';
+import 'package:colorful_iconify_flutter/icons/logos.dart';
 
 class MiniCard extends StatelessWidget {
   const MiniCard({Key? key}) : super(key: key);
@@ -461,10 +464,7 @@ class MiniCard extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Image.asset(
-                        'assets/icons/minicard/whatsapp.png',
-                        width: 25,
-                      ),
+                      Iconify(Ri.whatsapp_fill , color: Colors.green,) ,
                       Responsive.isMobile(context)
                           ? SizedBox()
                           : FittedBox(
@@ -507,10 +507,7 @@ class MiniCard extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Image.asset(
-                        'assets/icons/minicard/gmail.png',
-                        width: 25,
-                      ),
+                      Iconify(Logos.google_gmail, size: 25,),
                       Responsive.isMobile(context)
                           ? SizedBox()
                           : FittedBox(
