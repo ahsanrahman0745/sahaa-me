@@ -290,8 +290,13 @@ class _SearchState extends State<Search> {
                             CategoryFilter(),
 
                             ///================= ExpansionPanel 2 rating
+<<<<<<< HEAD
                             Rating(),
                             SizedBox(
+=======
+                            const Rating(),
+                            const SizedBox(
+>>>>>>> 4881297cde47ec706a2787a986df6b3376099bfa
                               height: 20,
                             ),
 
@@ -332,7 +337,11 @@ class _SearchState extends State<Search> {
                           pageTotal: 100,
                           pageInit: selectedPageNumber, // picked number when init page
                           colorPrimary: Colors.orange,
+<<<<<<< HEAD
 fontSize: 25,
+=======
+                          fontSize: 25,
+>>>>>>> 4881297cde47ec706a2787a986df6b3376099bfa
                           // iconToLast: Text("next",style: TextStyle(color: Colors.black),),
                           // iconToFirst: Text("previous", style: TextStyle(color: Colors.black),),
                           colorSub: Colors.white70,
