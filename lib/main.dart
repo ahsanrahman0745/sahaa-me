@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color(0xffe86e24),
       ),
-      home: const LandingView(),
+      home: const Search(),
     );
   }
 }
