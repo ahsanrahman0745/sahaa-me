@@ -19,12 +19,15 @@ class FooterButton extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
-              buttonName,
-              style: TextStyle(
-                fontSize: Responsive.isMobile(context) ? 12 : 15,
-                color: hoverColor,
-                overflow: TextOverflow.visible
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 5),
+              child: Text(
+                buttonName,
+                style: TextStyle(
+                  fontSize: Responsive.isMobile(context) ? 12 : 15,
+                  color: hoverColor,
+                  overflow: TextOverflow.visible
+                ),
               ),
             ),
             Responsive.isMobile(context)? const SizedBox() :
@@ -61,11 +64,14 @@ class FooterSocialButton extends StatelessWidget {
           children: [
             SvgPicture.asset('assets/svg/social/$socialIcon.svg', color: hoverColor, height: 15,),
             SizedBox(width: 5,),
-            Text(
-              buttonName,
-              style: TextStyle(
-                fontSize: Responsive.isMobile(context) ? 12 : 15,
-                color: hoverColor,
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 5),
+              child: Text(
+                buttonName,
+                style: TextStyle(
+                  fontSize: Responsive.isMobile(context) ? 12 : 15,
+                  color: hoverColor,
+                ),
               ),
             ),
             Responsive.isMobile(context)? const SizedBox() :
