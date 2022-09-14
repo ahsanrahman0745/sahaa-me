@@ -2,10 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:sahaame/header/headers.dart';
+import '../../footer/footer.dart';
 import '../../header/appbar.dart';
 import '../../responsive.dart';
 import 'components/card.dart';
 import 'components/company_details.dart';
+import 'components/request_call.dart';
 
 class MiniProfile extends StatefulWidget {
   const MiniProfile({Key? key}) : super(key: key);
@@ -29,6 +31,10 @@ class _MiniProfileState extends State<MiniProfile> {
             MiniCard(),
             SizedBox(height: 30,),
             CompanyDetails(),
+            SizedBox(height: 30,),
+            RequestCall(),
+            SizedBox(height: 30,),
+            Footer(),
           ],
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sahaame/view/landing/landing_view.dart';
+import 'package:sahaame/view/mini_profile/mini_profile.dart';
 import 'package:sahaame/view/search/search.dart';
 
 void main() {
