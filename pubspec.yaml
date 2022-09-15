@@ -39,7 +39,6 @@ dependencies:
   iconify_flutter: ^0.0.4
   auto_size_text: ^3.0.0
   number_pagination: ^0.0.3+2
-  google_fonts: ^3.0.1
 
 
 dev_dependencies:
