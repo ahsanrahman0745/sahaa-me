@@ -11,8 +11,9 @@ class Experience extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: EdgeInsets.symmetric(horizontal: Responsive.isMobile(context)?10: 100),
+    var size = MediaQuery.of(context).size;
+    return  SizedBox(
+    width: Responsive.isMobile(context)? size.width/1.04 : size.width/1.2,
 
       child: Column(
         children: [

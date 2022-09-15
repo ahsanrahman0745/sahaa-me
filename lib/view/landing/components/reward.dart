@@ -1,23 +1,25 @@
+import 'dart:math';
+
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sahaame/model/landing/reward_item.dart';
 
 import '../../../responsive.dart';
-import '../../../utils/constants.dart';
 import '../../../utils/data.dart';
-import '../../widgets/heading.dart';
 
 class Reward extends StatelessWidget {
   const Reward({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Container(
-      color: rewardColor,
-      padding: EdgeInsets.symmetric(horizontal: Responsive.isMobile(context)?10: 100),
+      color: Colors.white,
+     width: Responsive.isMobile(context)? size.width/1.04: size.width/1.2,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          heading(title: 'Hire & Earn Rewards !'),
+        Text('Hire & Earn Rewards !', style: TextStyle(fontSize: 36, color: Colors.black, fontWeight: FontWeight.bold),),
           SizedBox(
             height: 30,
           ),

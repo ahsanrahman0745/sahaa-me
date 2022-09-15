@@ -8,8 +8,9 @@ class Consultant extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding:  EdgeInsets.symmetric(horizontal: Responsive.isMobile(context)?10: 100),
+    var size = MediaQuery.of(context).size;
+    return SizedBox(
+      width: Responsive.isMobile(context) ? size.width/1.04 : size.width/1.2,
       child: Responsive.isDesktop(context)?
       Row(
         children: [
@@ -110,7 +111,7 @@ class Consultant extends StatelessWidget {
                       height: 50,
                       width: 50,
                       decoration: const BoxDecoration(
-                        color: lightColor,
+                        color: Colors.white,
                         borderRadius: BorderRadius.all(
                           Radius.circular(100),
                         ),
@@ -265,7 +266,7 @@ class Consultant extends StatelessWidget {
                     height: 50,
                     width: 50,
                     decoration: const BoxDecoration(
-                      color: lightColor,
+                      color: Colors.white,
                       borderRadius: BorderRadius.all(
                         Radius.circular(100),
                       ),

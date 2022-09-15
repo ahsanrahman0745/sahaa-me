@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-
+import 'package:flutter/material.dart';
 import '../../utils/constants.dart';
 
 class RewardItem extends StatelessWidget {
@@ -14,7 +14,7 @@ class RewardItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: lightColor,
+      color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sahaame/view/widgets/smallText.dart';
 
 import '../../utils/constants.dart';
 
@@ -33,7 +32,7 @@ Widget experienceItem(
                     height: 2),
               ),
               SizedBox(height: 15,),
-              smallText(text: description)
+             Text(description, style: TextStyle(fontSize: 13, color: Colors.black),)
             ],
           ),
         ),

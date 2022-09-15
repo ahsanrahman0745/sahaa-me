@@ -32,7 +32,7 @@ class TrustItem extends StatelessWidget {
                 top: 45,
                 child: Container(
                   decoration: BoxDecoration(
-                      border: Border.all(width: 3, color: lightColor),
+                      border: Border.all(width: 3, color: Colors.white),
                       borderRadius:
                       const BorderRadius.all(Radius.circular(100))),
                   child: CircleAvatar(

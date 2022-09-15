@@ -8,6 +8,7 @@ class Register extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Container(
       width: double.infinity,
       decoration: const BoxDecoration(
@@ -20,7 +21,7 @@ class Register extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: Responsive.isMobile(context) ? 10 : 100,
+                horizontal: Responsive.isMobile(context) ? 10 : size.width/10,
                 vertical: 100),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +32,7 @@ class Register extends StatelessWidget {
                   style: TextStyle(
                       fontSize: Responsive.isMobile(context) ? 24 : 36,
                       fontWeight: FontWeight.bold,
-                      color: lightColor),
+                      color: Colors.white),
                 ),
                 const SizedBox(
                   height: 15,
@@ -39,7 +40,7 @@ class Register extends StatelessWidget {
                 const Text(
                   'Register and become a partner with Sahaa to open a plethora box of benefits and opportunities',
                   style:
-                      TextStyle(color: lightColor, fontSize: 18, height: 1.2),
+                      TextStyle(color: Colors.white, fontSize: 18, height: 1.2),
                 ),
                 const SizedBox(
                   height: 30,

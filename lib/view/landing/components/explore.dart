@@ -11,8 +11,8 @@ class Explore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Padding(
-      padding:  EdgeInsets.symmetric(horizontal: Responsive.isMobile(context)?10: 100),
+    return SizedBox(
+      width: Responsive.isMobile(context)? size.width/1.04 : size.width/1.2,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

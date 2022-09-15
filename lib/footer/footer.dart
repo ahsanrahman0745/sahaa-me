@@ -9,8 +9,10 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Container(
-      padding: EdgeInsets.fromLTRB(Responsive.isMobile(context)? 10: 100, 50, 10, 10),
+      width: Responsive.isMobile(context)? size.width/1.04 : size.width/1.2,
+      padding: EdgeInsets.fromLTRB(Responsive.isMobile(context)? 10: 0, 50, 10, 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

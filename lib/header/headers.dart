@@ -8,6 +8,7 @@ import '../responsive.dart';
 
    @override
    Widget build(BuildContext context) {
+     var size = MediaQuery.of(context).size;
      return Column(
        children: [
          ///============first bar
@@ -18,9 +19,10 @@ import '../responsive.dart';
              child: Column(
                children: [
                  Container(
-                   constraints: const BoxConstraints(maxWidth: 1232),
+                   width: size.width/1.2,
+                   // constraints: const BoxConstraints(maxWidth: 1232),
                    padding:
-                   const EdgeInsets.symmetric(horizontal: 100, vertical: 10),
+                   const EdgeInsets.symmetric(horizontal: 0, vertical: 10),
                    child: Column(
                      children: [
                        Row(
@@ -83,8 +85,9 @@ import '../responsive.dart';
            child: Column(
              children: [
                Container(
+                 width: size.width/1.2,
                  padding: const EdgeInsets.symmetric(
-                   horizontal: 100,
+                   horizontal: 0,
                  ),
                  child: Column(
                    children: [
