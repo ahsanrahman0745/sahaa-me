@@ -17,15 +17,14 @@ class Trust extends StatelessWidget {
         children: [
           Text(
             'Why People Trust Sahaa ?',
-            style: TextStyle(
-                color: darkColor,
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                height: 2),
+            style: Responsive.isMobile(context)? MyTextStyles.SectionTitleSmallBlack : MyTextStyles.SectionTitleLargeBlack,
+          ),
+          SizedBox(
+            height: 20,
           ),
           Text(
             'You can find or list the businesses accordingly as per your requirements with simple steps and a strong customer-centric approach with Sahaa.',
-            style: TextStyle(color: darkColor, fontSize: 15, height: 2),
+            style: MyTextStyles.subHeadingGrey,
           ),
           SizedBox(
             height: 30,

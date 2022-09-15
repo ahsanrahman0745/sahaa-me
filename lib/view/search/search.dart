@@ -46,7 +46,7 @@ class _SearchState extends State<Search> {
             ///=================================header
 
 
-           Responsive.isMobile(context) ? HeaderSmallScreen()  : Header(),
+           Responsive.isMobile(context) ? HeaderSmallScreen()  :   Header(headerValue: true,),
 
 
 

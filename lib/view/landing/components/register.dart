@@ -29,18 +29,15 @@ class Register extends StatelessWidget {
               children: [
                 Text(
                   'Register to the Sahaa Family',
-                  style: TextStyle(
-                      fontSize: Responsive.isMobile(context) ? 24 : 36,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                  style: Responsive.isMobile(context)?MyTextStyles.sectionTitleSmallWhite : MyTextStyles.sectionTitleLargeWhite,
                 ),
                 const SizedBox(
                   height: 15,
                 ),
-                const Text(
+                 Text(
                   'Register and become a partner with Sahaa to open a plethora box of benefits and opportunities',
                   style:
-                      TextStyle(color: Colors.white, fontSize: 18, height: 1.2),
+                      MyTextStyles.headingSmallWhite,
                 ),
                 const SizedBox(
                   height: 30,

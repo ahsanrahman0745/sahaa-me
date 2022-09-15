@@ -30,7 +30,7 @@ class _LandingViewState extends State<LandingView> {
           child: Column(
             children: [
               Responsive.isMobile(context)? CustomAppBar():
-              Header(),
+              Header(headerValue: false,),
               const LandingSlider(),
              const SizedBox(height: 40,),
               const Explore(),

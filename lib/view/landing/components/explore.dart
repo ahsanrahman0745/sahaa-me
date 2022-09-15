@@ -16,72 +16,75 @@ class Explore extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Text(
+           Text(
             'One-Stop Solution For All Your Problems',
-            style: TextStyle(fontSize: 16, color: Colors.black54),
+            style: MyTextStyles.headingxSmallGrey,
           ),
           const SizedBox(
             height: 20,
           ),
-          const Text(
+           Text(
             'Explore the Sahaa Market',
-            style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.black),
+            style: Responsive.isMobile(context)?  MyTextStyles.SectionTitleSmallBlack: MyTextStyles.SectionTitleLargeBlack,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 30),
             child: Responsive.isDesktop(context)?
             Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    ExploreItem(
-                      text: 'Automotive',
-                      image: 'assets/svg/explore/Automotive.svg',
-                    ),
-                    ExploreItem(
-                      text: 'Cleaning',
-                      image: 'assets/svg/explore/Cleaning.svg',
-                    ),
-                    ExploreItem(
-                      text: 'Gym',
-                      image: 'assets/svg/explore/Fitness.svg',
-                    ),
-                    ExploreItem(
-                      text: 'Movers',
-                      image: 'assets/svg/explore/Movers.svg',
-                    ),
-                    ExploreItem(
-                      text: 'Finance',
-                      image: 'assets/svg/explore/Finance.svg',
-                    ),
-                  ],
+                IntrinsicHeight(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      ExploreItem(
+                        text: 'Automotive',
+                        image: 'assets/svg/explore/Automotive.svg',
+                      ),
+                      ExploreItem(
+                        text: 'Cleaning',
+                        image: 'assets/svg/explore/Cleaning.svg',
+                      ),
+                      ExploreItem(
+                        text: 'Gym',
+                        image: 'assets/svg/explore/Fitness.svg',
+                      ),
+                      ExploreItem(
+                        text: 'Movers',
+                        image: 'assets/svg/explore/Movers.svg',
+                      ),
+                      ExploreItem(
+                        text: 'Finance',
+                        image: 'assets/svg/explore/Finance.svg',
+                      ),
+                    ],
+                  ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    ExploreItem(
-                      text: 'Electrician',
-                      image: 'assets/svg/explore/Electrician.svg',
-                    ),
-                    ExploreItem(
-                      text: 'Mobile Repair',
-                      image: 'assets/svg/explore/mobile-repair.svg',
-                    ),
-                    ExploreItem(
-                      text: 'Laundary',
-                      image: 'assets/svg/explore/Laundry.svg',
-                    ),
-                    ExploreItem(
-                      text: 'Landscaping',
-                      image: 'assets/svg/explore/Landscaping.svg',
-                    ),
-                    ExploreItem(
-                      text: 'Health',
-                      image: 'assets/svg/explore/Health.svg',
-                    ),
-                  ],
+                IntrinsicHeight(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      ExploreItem(
+                        text: 'Electrician',
+                        image: 'assets/svg/explore/Electrician.svg',
+                      ),
+                      ExploreItem(
+                        text: 'Mobile Repair',
+                        image: 'assets/svg/explore/mobile-repair.svg',
+                      ),
+                      ExploreItem(
+                        text: 'Laundary',
+                        image: 'assets/svg/explore/Laundry.svg',
+                      ),
+                      ExploreItem(
+                        text: 'Landscaping',
+                        image: 'assets/svg/explore/Landscaping.svg',
+                      ),
+                      ExploreItem(
+                        text: 'Health',
+                        image: 'assets/svg/explore/Health.svg',
+                      ),
+                    ],
+                  ),
                 ),
               ],
             )
@@ -91,7 +94,7 @@ class Explore extends StatelessWidget {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 shrinkWrap: true,
-                children: [
+                children: const [
                   ExploreItem(
                     text: 'Automotive',
                     image: 'assets/svg/explore/Automotive.svg',
@@ -148,7 +151,7 @@ class Explore extends StatelessWidget {
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Text(
                     'See More',
                     style: TextStyle(

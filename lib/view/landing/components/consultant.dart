@@ -20,16 +20,14 @@ class Consultant extends StatelessWidget {
               children: [
                 Text(
                   'Hire A Consultant',
-                  style: TextStyle(
-                      color: darkColor,
-                      fontSize: 36,
-                      fontWeight: FontWeight.bold,
-                      height: 2),
-                  textAlign: TextAlign.center,
+                  style: MyTextStyles.SectionTitleLargeBlack, textAlign: TextAlign.center,
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 Text(
                   'Hire a Sahaa consultant to enjoy multiple services without any hassle. Our consultant will guide you about the best packages and services that match your requirements.',
-                  style: TextStyle(color: darkColor, fontSize: 15, height: 2),
+                  style: MyTextStyles.headingxSmallGrey,
                     textAlign: TextAlign.start,
                 ),
                 SizedBox(
@@ -135,71 +133,21 @@ class Consultant extends StatelessWidget {
             children: [
               Text(
                 'Hire A Consultant',
-                style: TextStyle(
-                    color: darkColor,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    height: 2),
+                style: MyTextStyles.SectionTitleSmallBlack,
                 textAlign: TextAlign.center,
+              ),
+              SizedBox(
+                height: 20,
               ),
               Text(
                 'Hire a Sahaa consultant to enjoy multiple services without any hassle. Our consultant will guide you about the best packages and services that match your requirements.',
-                style: TextStyle(color: darkColor, fontSize: 15, height: 2),
+                style: MyTextStyles.subHeadingGrey,
                 textAlign: TextAlign.start,
               ),
               SizedBox(
                 height: 30,
               ),
-              Responsive.isMobile(context)?
-              Column(
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      print("SHah ooo");
-                    },
-                    style: ElevatedButton.styleFrom(
-                      side: BorderSide.none,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 40, vertical: 20),
-                      foregroundColor: Colors.white,
-                      backgroundColor:sahaaColor, // foreground
-                    ),
-                    child: const Text("Call Now"),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  OutlinedButton(
-                    onPressed: () {},
-                    style: OutlinedButton.styleFrom(
-                      side: BorderSide(color: sahaaColor),
-                      padding:
-                      EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                    ),
-                    child: SizedBox(
-                      width: 100,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Email us',
-                            style: TextStyle(fontSize: 14, color: sahaaColor),
-                          ),
-                          SizedBox(width: 10,),
-                          Icon(
-                            Icons.arrow_circle_right,
-                            color: sahaaColor,
-                            size: 18,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              )
-              :
+
               Row(
                 children: [
                   ElevatedButton(
@@ -207,11 +155,8 @@ class Consultant extends StatelessWidget {
                       print("SHah ooo");
                     },
                     style: ElevatedButton.styleFrom(
-                      side: BorderSide.none,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.zero),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 40, vertical: 20),
+                      padding:  EdgeInsets.symmetric(
+                          horizontal: Responsive.isMobile(context)? 10:  40, vertical: Responsive.isMobile(context)? 0: 20),
                       foregroundColor: Colors.white,
                       backgroundColor:sahaaColor, // foreground
                     ),
@@ -225,17 +170,17 @@ class Consultant extends StatelessWidget {
                     style: OutlinedButton.styleFrom(
                       side: BorderSide(color: sahaaColor),
                       padding:
-                      EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                      EdgeInsets.symmetric(horizontal:Responsive.isMobile(context)? 10:  20, vertical:Responsive.isMobile(context)? 0:  20),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Email us',
-                          style: TextStyle(fontSize: 14, color: sahaaColor),
+                          style: MyTextStyles.subHeadingSahaa,
                         ),
                         SizedBox(width: 10,),
-                        Icon(
+                       Responsive.isMobile(context)? SizedBox(): Icon(
                           Icons.arrow_circle_right,
                           color: sahaaColor,
                           size: 18,
@@ -280,6 +225,7 @@ class Consultant extends StatelessWidget {
               )
             ],
           ),
+          SizedBox(height: 40,),
         ],
       ),
     );

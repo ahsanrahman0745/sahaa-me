@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../responsive.dart';
+import '../utils/constants.dart';
 
  class Header extends StatelessWidget {
-   const Header({Key? key}) : super(key: key);
+    Header({required this.headerValue}) ;
+
+   bool headerValue ;
 
    @override
    Widget build(BuildContext context) {
@@ -92,12 +95,14 @@ import '../responsive.dart';
                  child: Column(
                    children: [
                      Row(
+                       mainAxisAlignment:  MainAxisAlignment.spaceBetween,
                        children: [
                          SvgPicture.asset("assets/svg/sahaa-logo.svg", width: 100,),
                          const SizedBox(
                            width: 10,
                          ),
-                         const Expanded(
+                         ///============== search fields
+                         headerValue ? const Expanded(
                            child: TextField(
                              cursorColor: Colors.grey,
                              decoration: InputDecoration(
@@ -121,8 +126,8 @@ import '../responsive.dart';
                                EdgeInsets.all(12), // Added this
                              ),
                            ),
-                         ),
-                         const Expanded(
+                         ) : SizedBox(),
+                         headerValue ? const  Expanded(
                            child: TextField(
                              cursorColor: Colors.grey,
                              decoration: InputDecoration(
@@ -145,10 +150,10 @@ import '../responsive.dart';
                                EdgeInsets.all(12), // Added this
                              ),
                            ),
-                         ),
+                         ): SizedBox(),
 
                          ///=======================button
-                         Container(
+                        headerValue?  Container(
                            height: 34,
                            width: 100,
                            child: ElevatedButton(
@@ -161,28 +166,34 @@ import '../responsive.dart';
                                onPrimary: Colors.white, // foreground
                              ),
                            ),
-                         ),
+                         ) : SizedBox(),
 
                          ///================ login
                          const SizedBox(
                            width: 25,
                          ),
-                         const Icon(
-                           Icons.accessibility,
-                         ),
-                         const SizedBox(
-                           width: 2,
+                         Row(
+                           children: [
+                             const Icon(
+                               Icons.accessibility,
+                               color: sahaaColor,
+                             ),
+                             const SizedBox(
+                               width: 2,
+                             ),
+
+                             const Text(
+                               'Login',
+                             ),
+                             const SizedBox(
+                               width: 4,
+                             ),
+                             const Icon(
+                               Icons.arrow_forward_ios,
+                             ),
+                           ],
                          ),
 
-                         const Text(
-                           'Login',
-                         ),
-                         const SizedBox(
-                           width: 4,
-                         ),
-                         const Icon(
-                           Icons.arrow_forward_ios,
-                         ),
                        ],
                      )
                    ],

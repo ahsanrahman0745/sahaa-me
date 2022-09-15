@@ -26,7 +26,7 @@ class _MiniProfileState extends State<MiniProfile> {
         child: Column(
           children: [
             Responsive.isMobile(context)? CustomAppBar():
-            Header(),
+            Header(headerValue: true,),
             SizedBox(height: 30,),
             MiniCard(),
             SizedBox(height: 30,),

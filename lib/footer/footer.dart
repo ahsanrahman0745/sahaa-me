@@ -16,8 +16,8 @@ class Footer extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('About Us', style: TextStyle(fontSize: 24, color: darkColor, fontWeight: FontWeight.bold),),
-          const SizedBox(height: 20,),
+           Text('About Us', style: Responsive.isMobile(context)? MyTextStyles.headingxSmallBoldBlack: MyTextStyles.headingLargeBlack,),
+          const SizedBox(height: 15,),
          Responsive.isMobile(context)?
              Row(
                mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -34,7 +34,7 @@ class Footer extends StatelessWidget {
                    children: const [
                    FooterButton(buttonName: 'Sahaa App',),
                    FooterButton(buttonName: 'Sahaa Blogs',),
-                   FooterButton(buttonName: 'Sahaa Reviews',),
+                   LastFooterButton(buttonName: 'Sahaa Reviews',),
                  ],),
                ],
              ):
@@ -47,12 +47,12 @@ class Footer extends StatelessWidget {
               FooterButton(buttonName: 'Help & Support',),
               FooterButton(buttonName: 'Sahaa App',),
               FooterButton(buttonName: 'Sahaa Blogs',),
-              FooterButton(buttonName: 'Sahaa Reviews',),
+              LastFooterButton(buttonName: 'Sahaa Reviews',),
             ],
           ),
-          const SizedBox(height: 40,),
-          const Text('Our Businesses & Services', style: TextStyle(fontSize: 24, color: darkColor, fontWeight: FontWeight.bold),),
-          const SizedBox(height: 20,),
+          const SizedBox(height: 30,),
+           Text('Our Businesses & Services', style: Responsive.isMobile(context)? MyTextStyles.headingxSmallBoldBlack: MyTextStyles.headingLargeBlack,),
+          const SizedBox(height: 15,),
          Responsive.isMobile(context)?
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -72,7 +72,7 @@ class Footer extends StatelessWidget {
                  FooterButton(buttonName: 'SEO',),
                  FooterButton(buttonName: 'Website',),
                  FooterButton(buttonName: 'Video',),
-                 FooterButton(buttonName: 'Free Digital Marketing',),
+                 LastFooterButton(buttonName: 'Free Digital Marketing',),
                ],
              ),
            ],
@@ -88,12 +88,12 @@ class Footer extends StatelessWidget {
               FooterButton(buttonName: 'SEO',),
               FooterButton(buttonName: 'Website',),
               FooterButton(buttonName: 'Video',),
-              FooterButton(buttonName: 'Free Digital Marketing',),
+              LastFooterButton(buttonName: 'Free Digital Marketing',),
             ],
           ),
-          const SizedBox(height: 40,),
-          const Text('Social Links', style: TextStyle(fontSize: 24, color: darkColor, fontWeight: FontWeight.bold),),
-          const SizedBox(height: 20,),
+          const SizedBox(height: 30,),
+           Text('Social Links', style: Responsive.isMobile(context)? MyTextStyles.headingxSmallBoldBlack: MyTextStyles.headingLargeBlack,),
+          const SizedBox(height: 15,),
          Responsive.isMobile(context)?
          Row(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -105,6 +105,7 @@ class Footer extends StatelessWidget {
                  FooterSocialButton(buttonName: 'Instagram', socialIcon: 'instagram'),
                  FooterSocialButton(buttonName: 'Twitter', socialIcon: 'twitter'),
                  FooterSocialButton(buttonName: 'Linked In', socialIcon: 'linkedin'),
+
                ],
              ),
              Column(
@@ -113,6 +114,7 @@ class Footer extends StatelessWidget {
                  FooterSocialButton(buttonName: 'Linked In', socialIcon: 'linkedin'),
                  FooterSocialButton(buttonName: 'Tik Tok', socialIcon: 'tiktok'),
                  FooterSocialButton(buttonName: 'Youtube', socialIcon: 'youtube'),
+                 LastSocialButton(buttonName: 'Pinterest', )
                ],
              ),
            ],
@@ -127,6 +129,7 @@ class Footer extends StatelessWidget {
               FooterSocialButton(buttonName: 'Linked In', socialIcon: 'linkedin'),
               FooterSocialButton(buttonName: 'Tik Tok', socialIcon: 'tiktok'),
               FooterSocialButton(buttonName: 'Youtube', socialIcon: 'youtube'),
+              LastSocialButton(buttonName: 'Pinterest', )
             ],
           ),
           const SizedBox(height: 40,),
@@ -151,7 +154,8 @@ class Footer extends StatelessWidget {
                crossAxisAlignment: CrossAxisAlignment.start,
                children: const [
                  FooterButton(buttonName: 'Legal',),
-                 FooterButton(buttonName: 'Accessibility Statement',),
+                 LastFooterButton(buttonName: 'Accessibility Statement',),
+
                ],
              ),
            ],
@@ -164,7 +168,7 @@ class Footer extends StatelessWidget {
               FooterButton(buttonName: 'Terms & Condition',),
               FooterButton(buttonName: 'Review Policy',),
               FooterButton(buttonName: 'Legal',),
-              FooterButton(buttonName: 'Accessibility Statement',),
+              LastFooterButton(buttonName: 'Accessibility Statement',),
             ],
           ),
           const SizedBox(height: 40,),
@@ -172,9 +176,9 @@ class Footer extends StatelessWidget {
             children: [
               SvgPicture.asset('assets/svg/favicon.svg', height: Responsive.isMobile(context)? 20 : 40,),
               const SizedBox(width: 20,),
-              const Icon(Icons.copyright_rounded, color: Colors.black, size: 15,),
+               Icon(Icons.copyright_rounded, color: Colors.black, size: Responsive.isMobile(context)? 15 : 22,),
               const SizedBox(width: 10,),
-              Text('sahaa Limited 2022', style: TextStyle(color: Colors.black, fontSize: Responsive.isMobile(context)? 20: 36),),
+              Text('sahaa Limited 2022', style: Responsive.isMobile(context)? MyTextStyles.headingxSmallBoldBlack : MyTextStyles.headingLargeBlack),
               
             ],
           )

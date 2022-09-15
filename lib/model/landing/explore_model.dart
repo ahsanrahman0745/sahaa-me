@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:sahaame/utils/constants.dart';
 
 import '../../responsive.dart';
 
@@ -11,10 +12,11 @@ final String text , image;
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          SvgPicture.asset(image ,width: Responsive.isMobile(context)? 50 : 100,),
+          SvgPicture.asset(image ,width: Responsive.isMobile(context)? 70 : 100,),
           const SizedBox(height: 15,),
-          Text(text, style: const TextStyle( fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black),),
+          Text(text, style:MyTextStyles.headingxSmallBoldBlack,),
         ],
       ),
     );

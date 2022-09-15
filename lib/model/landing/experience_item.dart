@@ -1,42 +1,42 @@
 import 'package:flutter/material.dart';
 
+import '../../responsive.dart';
 import '../../utils/constants.dart';
 
-Widget experienceItem(
-    {required String title,
-    required String description,
-    required String count}) {
-  return Container(
-    margin: const EdgeInsets.only(left: 10, right: 10),
-    child: Stack(
-      children: [
-        Text(
-          count,
-          style: TextStyle(
-            color: sahaaColor.withOpacity(0.2),
-            fontWeight: FontWeight.bold,
-            fontSize: 80,
+class ExperienceItem extends StatelessWidget {
+  const ExperienceItem({Key? key, required this.title, required this.description, required this.count}) : super(key: key);
+final  String title,  description, count;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(left: 10, right: 10),
+      child: Stack(
+        children: [
+          Text(
+            count,
+            style: TextStyle(
+              color: sahaaColor.withOpacity(0.3),
+              fontWeight: FontWeight.bold,
+              fontSize: 80,
+            ),
           ),
-        ),
-        Container(
-          padding: EdgeInsets.only(left: 20, top: 10, bottom: 10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: const TextStyle(
-                    color: darkColor,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w600,
-                    height: 2),
-              ),
-              SizedBox(height: 15,),
-             Text(description, style: TextStyle(fontSize: 13, color: Colors.black),)
-            ],
+          Container(
+            padding: EdgeInsets.only(left: 20, top: 10, bottom: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: Responsive.isMobile(context)?MyTextStyles.headingxSmallBoldBlack :MyTextStyles.headingLargeBlack,
+                ),
+                SizedBox(height: 15,),
+                Text(description, style: MyTextStyles.subHeadingBlack,)
+              ],
+            ),
           ),
-        ),
-      ],
-    ),
-  );
+        ],
+      ),
+    );
+  }
 }
+

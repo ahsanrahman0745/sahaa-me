@@ -17,15 +17,15 @@ class Experience extends StatelessWidget {
 
       child: Column(
         children: [
-          Text('We Enrich Your Marketplace Experience Wisely', style: TextStyle(
-              color: darkColor, fontSize: 30, fontWeight: FontWeight.bold, height: 2), textAlign: TextAlign.center,),
-          Text('Enhance Your Business Reachability With Simple Steps With Sahaa.', style: TextStyle(color: darkColor, fontSize: 15, height: 2),textAlign: TextAlign.center,),
+          Text('We Enrich Your Marketplace Experience Wisely', style: Responsive.isMobile(context)? MyTextStyles.SectionTitleSmallBlack: MyTextStyles.SectionTitleSmallBlack, textAlign: TextAlign.center,),
+          SizedBox(height: 20,),
+          Text('Enhance Your Business Reachability With Simple Steps With Sahaa.', style: MyTextStyles.headingxSmallGrey, textAlign: TextAlign.center,),
          SizedBox(height: 20,),
          Responsive.isMobile(context)?
          Column(
            children: [
              for (var experience in experiences)
-               experienceItem(
+               ExperienceItem(
                    title: experience['title'],
                    description: experience['description'],
                    count: experience['count']),
@@ -36,7 +36,7 @@ class Experience extends StatelessWidget {
               children: [
                 for (var experience in experiences)
                   Expanded(
-                    child: experienceItem(
+                    child: ExperienceItem(
                         title: experience['title'],
                         description: experience['description'],
                         count: experience['count']),

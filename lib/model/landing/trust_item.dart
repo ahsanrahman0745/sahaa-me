@@ -13,6 +13,7 @@ class TrustItem extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(left: 10, right: 10),
       decoration: BoxDecoration(
+
         border: Border.all(width: 1, color: Colors.black.withOpacity(0.3)),
       ),
       child: Column(
@@ -36,6 +37,7 @@ class TrustItem extends StatelessWidget {
                       borderRadius:
                       const BorderRadius.all(Radius.circular(100))),
                   child: CircleAvatar(
+                    backgroundColor: Colors.white,
                     radius: 50,
                     child: SvgPicture.asset(
                       'assets/svg/trust/$image',
@@ -47,22 +49,20 @@ class TrustItem extends StatelessWidget {
           ),
 
           Container(
+            decoration: BoxDecoration(),
             padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10, top: 40),
             child: Column(
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.w700),
+                  textAlign: TextAlign.center,
+                  style: Responsive.isMobile(context)? MyTextStyles.headingxSmallBlack:  MyTextStyles.headingSmallBlack,
                 ),
                 SizedBox(height: 15,),
                 Text(
                   description,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 17,
-                      height: 1.4,
-                      color: darkColor.withOpacity(0.7)),
+                  style: Responsive.isMobile(context)? MyTextStyles.regularGrey : MyTextStyles.subHeadingGrey,
                 )
               ],
             ),

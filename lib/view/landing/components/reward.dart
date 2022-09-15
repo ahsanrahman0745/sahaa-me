@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:sahaame/model/landing/reward_item.dart';
 
 import '../../../responsive.dart';
+import '../../../utils/constants.dart';
 import '../../../utils/data.dart';
 
 class Reward extends StatelessWidget {
@@ -14,74 +15,48 @@ class Reward extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Container(
-      color: Colors.white,
-     width: Responsive.isMobile(context)? size.width/1.04: size.width/1.2,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-        Text('Hire & Earn Rewards !', style: TextStyle(fontSize: 36, color: Colors.black, fontWeight: FontWeight.bold),),
-          SizedBox(
-            height: 30,
-          ),
-         Responsive.isDesktop(context)?
-         IntrinsicHeight(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start  ,
-              children: [
-                Expanded(
-                    child: RewardItem(
-                      start: rewards[0]['start'],
-                      middle: rewards[0]['middle'],
-                      end: rewards[0]['end'],
-                      image: rewards[0]['image'],
-                    )),
-                SizedBox(width: 30,),
-                Expanded(
-                    child: RewardItem(
-                      start: rewards[1]['start'],
-                      middle: rewards[1]['middle'],
-                      end: rewards[1]['end'],
-                      image: rewards[1]['image'],
-                    )),
-                SizedBox(width: 30,),
-                Expanded(
-                    child: RewardItem(
-                      start: rewards[2]['start'],
-                      middle: rewards[2]['middle'],
-                      end: rewards[2]['end'],
-                      image: rewards[2]['image'],
-                    )),
-              ],
+      width: size.width,
+      color: Colors.grey.shade200,
+      child: Padding(
+       padding: EdgeInsets.symmetric(horizontal: Responsive.isMobile(context)? 10 : size.width/11),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            SizedBox(height: 30,),
+          Text('Hire & Earn! Get paid. Repeat!', style: Responsive.isMobile(context)? MyTextStyles.SectionTitleSmallBlack: MyTextStyles.SectionTitleLargeBlack),
+            SizedBox(
+              height: 30,
             ),
-          )
-          :
-         Column(
-           crossAxisAlignment: CrossAxisAlignment.center,
-           children: [
-             RewardItem(
-               start: rewards[0]['start'],
-               middle: rewards[0]['middle'],
-               end: rewards[0]['end'],
-               image: rewards[0]['image'],
-             ),
-             SizedBox(height: 30,),
-             RewardItem(
-               start: rewards[1]['start'],
-               middle: rewards[1]['middle'],
-               end: rewards[1]['end'],
-               image: rewards[1]['image'],
-             ),
-             SizedBox(height: 30,),
-             RewardItem(
-               start: rewards[2]['start'],
-               middle: rewards[2]['middle'],
-               end: rewards[2]['end'],
-               image: rewards[2]['image'],
-             ),
-           ],
-         ),
-          SizedBox(height: 40,),
-        ],
+           Responsive.isDesktop(context) || Responsive.isTablet(context)?
+           IntrinsicHeight(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start  ,
+                children: [
+                  Expanded(
+                      child:Image.asset('assets/image/Banner 1.png'),),
+                  SizedBox(width: 30,),
+                  Expanded(
+                    child:Image.asset('assets/image/Banner 2.png'),),
+                  SizedBox(width: 30,),
+                  Expanded(
+                    child:Image.asset('assets/image/Banner 3.png'),),
+                ],
+              ),
+            )
+            :
+           Column(
+             crossAxisAlignment: CrossAxisAlignment.center,
+             children: [
+               Image.asset('assets/image/Banner 1.png', width: size.width/1.04, fit: BoxFit.cover,),
+               SizedBox(height: 20,),
+               Image.asset('assets/image/Banner 1.png', width: size.width/1.04,fit: BoxFit.cover,),
+               SizedBox(height: 20,),
+               Image.asset('assets/image/Banner 1.png', width: size.width/1.04,fit: BoxFit.cover,),
+             ],
+           ),
+            SizedBox(height: 40,),
+          ],
+        ),
       ),
     );
   }

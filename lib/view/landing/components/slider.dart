@@ -13,7 +13,7 @@ class LandingSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return ClipPath(
-      clipper: Responsive.isDesktop(context)? WaveClipper() : null,
+      clipper: Responsive.isTablet(context)?null : WaveClipper() ,
       child: Stack(
         children: [
           const Carousel(),
@@ -22,16 +22,17 @@ class LandingSlider extends StatelessWidget {
               children: [
                 Container(
                   width: size.width/1.2,
-                  padding:  EdgeInsets.fromLTRB(0, 100, 0, 20),
-                  height: Responsive.isMobile(context)? 600 : 500,
+                  padding:  EdgeInsets.fromLTRB(0,Responsive.isMobile(context)? 50 : 100, 0, 20),
+                  height: 500,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Responsive.isMobile(context)?  Column(
+                      Responsive.isMobile(context)?
+                      Column(
                         children: [
                           TextField(
-                            cursorColor: Colors.black87,
+                            // cursorColor: Colors.black87,
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.white,
@@ -40,7 +41,7 @@ class LandingSlider extends StatelessWidget {
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.zero,
                                 borderSide:
-                                BorderSide(color: Colors.orange, width: 2),
+                                BorderSide(color: sahaaColor, width: 2),
                               ),
                               hintText:
                               'Business Name, Product Name or Service',
@@ -51,7 +52,7 @@ class LandingSlider extends StatelessWidget {
                           ),
                           SizedBox(height: 10,),
                           TextField(
-                            cursorColor: Colors.black87,
+                            // cursorColor: Colors.black87,
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.my_location),
                               prefixIconColor: Colors.black87,
@@ -62,7 +63,7 @@ class LandingSlider extends StatelessWidget {
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.zero,
                                 borderSide:
-                                BorderSide(color: Colors.orange, width: 2),
+                                BorderSide(color: sahaaColor, width: 2),
                               ),
                               hintText: 'Select City, Area',
                               isDense: true,
@@ -88,8 +89,7 @@ class LandingSlider extends StatelessWidget {
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 50, vertical: 25),
                                 foregroundColor: Colors.white,
-                                backgroundColor:
-                                Theme.of(context).primaryColor, // foreground
+                                backgroundColor:sahaaColor, // foreground
                               ),
                               child: const Text("Search"),
                             ),
@@ -100,7 +100,7 @@ class LandingSlider extends StatelessWidget {
                         children: [
                           const Expanded(
                             child: TextField(
-                              cursorColor: Colors.black87,
+                              // cursorColor: Colors.black87,
                               decoration: InputDecoration(
                                 filled: true,
                                 fillColor: Colors.white,
@@ -109,7 +109,7 @@ class LandingSlider extends StatelessWidget {
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.zero,
                                   borderSide:
-                                      BorderSide(color: Colors.orange, width: 2),
+                                      BorderSide(color:sahaaColor, width: 2),
                                 ),
                                 hintText:
                                     'Business Name, Product Name or Service',
@@ -132,7 +132,7 @@ class LandingSlider extends StatelessWidget {
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.zero,
                                   borderSide:
-                                      BorderSide(color: Colors.orange, width: 2),
+                                      BorderSide(color: sahaaColor, width: 2),
                                 ),
                                 hintText: 'Select City, Area',
                                 isDense: true,
@@ -157,13 +157,13 @@ class LandingSlider extends StatelessWidget {
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 50, vertical: 25),
                               foregroundColor: Colors.white,
-                              backgroundColor:
-                                  Theme.of(context).primaryColor, // foreground
+                              backgroundColor:sahaaColor, // foreground
                             ),
                             child: const Text("Search"),
                           ),
                         ],
                       ),
+                      /// title text
                       SizedBox(
                         width: Responsive.isMobile(context)? null:  500,
                         child: RichText(
@@ -173,23 +173,23 @@ class LandingSlider extends StatelessWidget {
                                 text: 'Sahaa Connecting ',
                                 style:
                                     TextStyle(
-
-                                        fontSize: Responsive.isDesktop(context)? 48 : 36, color: Colors.white ,fontWeight: FontWeight.bold),
+                                      fontFamily: 'Montserrat',
+                                        fontSize: Responsive.isDesktop(context)? 36 : 24, color: Colors.white ,fontWeight: FontWeight.bold),
                               ),
                               TextSpan(
                                 text: 'Customers ',
                                 style:
-                                TextStyle(fontSize: Responsive.isDesktop(context)? 48 : 36, color: Theme.of(context).primaryColor,fontWeight: FontWeight.bold),
+                                TextStyle(fontFamily: 'Montserrat',fontSize: Responsive.isDesktop(context)? 36 : 24, color: sahaaColor,fontWeight: FontWeight.bold),
                               ),
                               TextSpan(
                                 text: 'With Right ',
                                 style:
-                                TextStyle(fontSize: Responsive.isDesktop(context)? 48 : 36, color: Colors.white,fontWeight: FontWeight.bold),
+                                TextStyle(fontFamily: 'Montserrat',fontSize: Responsive.isDesktop(context)? 36 : 24, color: Colors.white,fontWeight: FontWeight.bold),
                               ),
                               TextSpan(
                                 text: 'Business',
                                 style:
-                                TextStyle(fontSize: Responsive.isDesktop(context)? 48 : 36, color: Theme.of(context).primaryColor,fontWeight: FontWeight.bold),
+                                TextStyle(fontSize: Responsive.isDesktop(context)? 36 : 24, color: sahaaColor,fontWeight: FontWeight.bold),
                               ),
                             ],
                           ),
