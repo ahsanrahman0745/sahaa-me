@@ -18,7 +18,7 @@ class lastSideBarImages extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        Center(
+        /*  Center(
           child: RichText(
             text: const TextSpan(
               text: 'Earn  ',
@@ -45,8 +45,8 @@ class lastSideBarImages extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 20,),
-        Center(
+        SizedBox(height: 20,),*/
+        /*Center(
           child: RichText(
             text: const TextSpan(
               text: 'with  each  referral ',
@@ -55,10 +55,10 @@ class lastSideBarImages extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 30,),
+        SizedBox(height: 30,),*/
         ///=====================================Second image and info
         Image.asset(sideBarBottomImage1),
-        const SizedBox(
+       /* const SizedBox(
           height: 10,
         ),
         Center(
@@ -100,11 +100,11 @@ class lastSideBarImages extends StatelessWidget {
 
             ),
           ),
-        ),
+        ),*/
         SizedBox(height: 30,),
         ///=====================================third image and info
         Image.asset(sideBarBottomImage2),
-        const SizedBox(
+       /* const SizedBox(
           height: 10,
         ),
         Center(
@@ -139,7 +139,7 @@ class lastSideBarImages extends StatelessWidget {
 
             ),
           ),
-        ),
+        ),*/
       ],
     );
   }

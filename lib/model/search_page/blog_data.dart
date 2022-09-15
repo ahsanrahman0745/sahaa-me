@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-import '../../../utils/images.dart';
+import '../../utils/images.dart';
 
 class CardData {
   final String? image, text;

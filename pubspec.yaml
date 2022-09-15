@@ -39,6 +39,7 @@ dependencies:
   iconify_flutter: ^0.0.4
   auto_size_text: ^3.0.0
   number_pagination: ^0.0.3+2
+  google_fonts: ^3.0.1
 
 
 dev_dependencies:
@@ -86,11 +87,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

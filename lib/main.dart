@@ -15,9 +15,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       debugShowCheckedModeBanner: false,
       title: 'Sahaa',
       theme: ThemeData(
+        fontFamily: "Montserrat",
         primarySwatch: Palette.myColors,
         primaryColor: const Color(0xffe86e24),
       ),

@@ -23,7 +23,8 @@ class _DropdownFilterState extends State<DropdownFilter> {
   @override
 
   Widget build(BuildContext context) {
-    return  DropdownButtonHideUnderline(
+    return
+      DropdownButtonHideUnderline(
       child: DropdownButton2(
         isExpanded: true,
         hint: Row(

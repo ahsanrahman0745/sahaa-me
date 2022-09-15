@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sahaame/view/landing/components/waveclipper.dart';
 
 import '../../../responsive.dart';
@@ -172,7 +173,9 @@ class LandingSlider extends StatelessWidget {
                               TextSpan(
                                 text: 'Sahaa Connecting ',
                                 style:
-                                    TextStyle(fontSize: Responsive.isDesktop(context)? 48 : 36, color: Colors.white ,fontWeight: FontWeight.bold),
+                                    TextStyle(
+
+                                        fontSize: Responsive.isDesktop(context)? 48 : 36, color: Colors.white ,fontWeight: FontWeight.bold),
                               ),
                               TextSpan(
                                 text: 'Customers ',
