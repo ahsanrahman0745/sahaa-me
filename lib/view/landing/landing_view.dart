@@ -23,6 +23,7 @@ class _LandingViewState extends State<LandingView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       endDrawer: Drawer(),
       body: SizedBox(
         width: double.infinity,
