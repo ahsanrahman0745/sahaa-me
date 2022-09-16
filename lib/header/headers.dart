@@ -214,7 +214,7 @@ import '../view/free_listing/free_listing.dart';
 
          ///===============================divider line
           SizedBox(
-           height: headerValue? 15 : 10,
+           height: headerValue? 15 : 11,
          ),
          headerValue? Divider(
            thickness: 5,
