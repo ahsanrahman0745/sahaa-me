@@ -36,8 +36,9 @@ class _CarouselState extends State<Carousel> {
     return  Stack(
       children: [
         SizedBox(
-          height: 610,
+          // height: 610,
           child: CustomScrollView(
+            shrinkWrap: true,
             physics:  ClampingScrollPhysics(),
             slivers: [
               ///Indicator

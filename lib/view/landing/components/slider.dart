@@ -23,9 +23,8 @@ class LandingSlider extends StatelessWidget {
                 Container(
                   width: size.width/1.2,
                   padding:  EdgeInsets.fromLTRB(0,Responsive.isMobile(context)? 50 : 100, 0, 20),
-                  height: 500,
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Responsive.isMobile(context)?

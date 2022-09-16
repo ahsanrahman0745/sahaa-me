@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../responsive.dart';
 import '../utils/constants.dart';
+import '../view/free_listing/free_listing.dart';
 
  class Header extends StatelessWidget {
     Header({required this.headerValue}) ;
@@ -42,9 +43,16 @@ import '../utils/constants.dart';
                              style: TextStyle(color: Colors.white,fontSize: Responsive.isDesktop(context)? null :10),
                            ),
                            Spacer(),
-                           Text(
-                             "get a free Listing",
-                             style: TextStyle(color: Colors.white,fontSize: Responsive.isDesktop(context)? null :10),
+                           InkWell(
+                             hoverColor: Colors.transparent,
+                             onTap: (){
+                               Navigator.push(
+                                 context, MaterialPageRoute(builder: (context) => FreeListing()),);
+                             },
+                             child: Text(
+                               "get a free Listing",
+                               style: TextStyle(color: Colors.white,fontSize: Responsive.isDesktop(context)? null :10),
+                             ),
                            ),
                            SizedBox(
                              width: 40,
@@ -102,7 +110,8 @@ import '../utils/constants.dart';
                            width: 10,
                          ),
                          ///============== search fields
-                         headerValue ? const Expanded(
+                         headerValue ? const
+                         Expanded(
                            child: TextField(
                              cursorColor: Colors.grey,
                              decoration: InputDecoration(
@@ -204,13 +213,13 @@ import '../utils/constants.dart';
          ),
 
          ///===============================divider line
-         const SizedBox(
-           height: 15,
+          SizedBox(
+           height: headerValue? 15 : 0,
          ),
-         const Divider(
+         headerValue? Divider(
            thickness: 5,
            color: Colors.orange,
-         ),
+         ) : SizedBox(),
        ],
      );
    }
